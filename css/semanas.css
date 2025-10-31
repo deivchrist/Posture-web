@@ -1,0 +1,221 @@
+/* ============================================= */
+/* ESTILOS (SÓLO PARA PÁGINAS DE SEMANAS)        */
+/* ============================================= */
+
+/* Hero para páginas internas (ej. semana10.html) */
+.page-hero {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #ffffff;
+    padding: 3rem 0;
+    margin-top: -70px; /* Anula el padding-top de main */
+    padding-top: 100px; /* 70px del header + 30px de espacio */
+}
+
+/* Alineamos el h1 y h2 con el .container */
+.page-hero h1,
+.page-hero h2 {
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 2rem; 
+    text-align: left;
+}
+
+.page-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+/* Párrafo de introducción en página de semana */
+.intro-paragraph {
+    font-size: 1.2rem; 
+    color: #444;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Divisor de sección */
+.section-divider {
+    margin: 3rem auto;
+    border: 0;
+    border-top: 1px solid #eee;
+    max-width: 800px;
+}
+
+/* Estilos para texto, h3, etc. en páginas de semanas */
+.content-section .container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section .container h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2.5rem; 
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Subtítulo de 4to nivel */
+.subsection-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para Tablas */
+.container table {
+    width: 100%;
+    max-width: 800px; 
+    margin: 2rem auto; 
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.container th, .container td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: left;
+}
+
+.container th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #333;
+}
+
+.container td {
+    background-color: #ffffff;
+    vertical-align: top;
+    color: #555;
+}
+
+.container td strong {
+    color: #111;
+}
+
+/* Estilos para cuadrícula de imágenes */
+.image-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+}
+
+.image-grid-2 img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-grid-2 img:hover {
+    transform: scale(1.03);
+}
+
+/* Imagen centrada (para la de corte láser) */
+.content-image.image-center {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .image-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .content-image.image-center {
+        max-width: 100%;
+    }
+}
+
+/* ============================================= */
+/* --- NUEVO --- Estilos de Documentación (Act 2) --- */
+/* ============================================= */
+
+.doc-layout {
+    display: grid;
+    /* Dos columnas, la segunda un poco más grande para las imágenes */
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: center; /* Centra el texto y la imagen verticalmente */
+    max-width: 900px; /* Un poco más ancho que el texto normal */
+    margin: 3rem auto; /* Espacio arriba y abajo */
+}
+
+/* Estilo para la versión invertida */
+.doc-layout.doc-layout-reverse {
+    /* Invierte las columnas */
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.doc-layout.doc-layout-reverse .doc-text {
+    grid-column: 2; /* El texto pasa a la columna 2 */
+}
+
+.doc-layout.doc-layout-reverse .doc-media {
+    grid-column: 1; /* La imagen pasa a la columna 1 */
+    grid-row: 1;
+}
+
+.doc-text {
+    /* Anulamos el centrado para que se alinee con la cuadrícula */
+    max-width: none;
+    margin: 0;
+}
+
+.doc-text .subsection-title {
+    max-width: none;
+    margin-left: 0;
+}
+
+.doc-text p {
+    max-width: none;
+    margin-left: 0;
+}
+
+/* Responsive para el nuevo layout */
+@media (max-width: 900px) {
+    .doc-layout {
+        grid-template-columns: 1fr; /* 1 sola columna */
+    }
+
+    .doc-layout.doc-layout-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .doc-layout.doc-layout-reverse .doc-text {
+        grid-column: 1; /* Resetea a columna 1 */
+    }
+
+    .doc-layout.doc-layout-reverse .doc-media {
+        grid-column: 1; /* Resetea a columna 1 */
+        grid-row: 1; /* Mantiene la imagen primero */
+    }
+}

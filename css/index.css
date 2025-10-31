@@ -1,0 +1,255 @@
+/* ============================================= */
+/* ESTILOS (SÓLO PARA INDEX.HTML)                */
+/* ============================================= */
+
+/* SECCIÓN HERO */
+.hero-section {
+    height: calc(100vh - 70px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; 
+    text-align: center;
+    padding: 0 1rem; 
+}
+
+.hero-content h1 {
+    font-size: 4.5rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem; 
+    font-weight: 300; 
+    margin-bottom: 1rem;
+    text-align: center; 
+    color: #ffffff; 
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* ESTILOS DE TEXTO (PARA .container EN INDEX) */
+.content-section .container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section .container h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2.5rem; 
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section .container ul {
+    list-style-position: outside; 
+    padding-left: 1.5rem; 
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section .container ul li {
+    margin-bottom: 0.5rem; 
+}
+
+/* SECCIÓN SEMANAS */
+.semanas-grid {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; 
+}
+
+.semana-card {
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    aspect-ratio: 4 / 3;
+}
+
+.semana-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.semana-card img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+    object-position: center;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff; 
+    padding: 1.2rem;
+    text-align: left;
+}
+
+.card-overlay h3 {
+    margin: 0; 
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+a.semana-card-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+@media (max-width: 992px) {
+    .semanas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .semanas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SECCIÓN INTEGRANTES */
+.integrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.integrante-card {
+    background-color: #ffffff;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.integrante-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+    width: 100%; 
+    height: 400px; 
+    display: block;
+    object-fit: cover;
+    object-position: center top; 
+}
+
+.integrante-info {
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 1.5rem;
+    text-align: left; 
+}
+
+.integrante-info h3 {
+    margin: 0 0 0.25rem 0; 
+    font-size: 1.5rem;
+    text-transform: capitalize; 
+}
+
+.integrante-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #cccccc; 
+}
+
+@media (max-width: 768px) {
+    .integrantes-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .profile-pic {
+        height: 350px;
+    }
+}
+
+/* IMÁGENES Y GRÁFICOS (EN INDEX) */
+.content-image {
+    display: block; 
+    margin: 2rem auto; 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+img.content-image {
+    max-width: 600px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* TARJETAS DE INFO (EN INDEX) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card {
+    background: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: #ffffff;
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.info-card h4 {
+    color: #111111; 
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    font-size: 0.9rem; 
+    color: #555555; 
+    margin: 0; 
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

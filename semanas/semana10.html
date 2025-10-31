@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 10 - Posture</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/semanas.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="/index.html#hero"> <img src="/images/logo-posture.png" alt="Logo de Posture" class="logo-image">
+                    POSTURE
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/index.html#intro" class="nav-link">Introducción</a></li>
+                <li class="nav-item"><a href="/index.html#concepto" class="nav-link">Concepto</a></li>
+                <li class="nav-item dropdown">
+                    <a href="/index.html#semanas" class="nav-link">Semanas &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/semanas/semana4.html">SEMANA 4</a></li>
+                        <li><a href="/semanas/semana6.html">SEMANA 6</a></li>
+                        <li><a href="/semanas/semana8.html">SEMANA 8</a></li>
+                        <li><a href="/semanas/semana10.html">SEMANA 10</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="/index.html#integrantes" class="nav-link">Integrantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="page-hero">
+            <div class="container">
+                <h1>Semana 10: Fabricación Digital</h1>
+                <h2>De la preparación a la fabricación</h2>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                
+                <p class="intro-paragraph">
+                    En esta fase, aplicamos los conceptos de clasificación y preparación de piezas para la fabricación digital. Analizamos el modelo 3D de nuestro proyecto "Posture" definiremos los procesos, materiales y roles para la construcción del prototipo físico.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Actividad 1: Clasificación de Piezas del Proyecto</h3>
+                <p>Analizamos nuestro modelo digital completo y decidimos el método de fabricación óptimo para cada componente, justificando la elección del material y el proceso.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pieza</th>
+                            <th>Tipo de fabricación</th>
+                            <th>Justificación</th>
+                            <th>Material sugerido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Collar / Banda Ergonómica</strong></td>
+                            <td>Impresión 3D</td>
+                            <td>La pieza tiene una geometría 3D orgánica y curva, diseñada para adaptarse al cuello. Es imposible de fabricar con corte láser. Requiere ser un solo cuerpo sólido y resistente.</td>
+                            <td>PLA (por su rigidez)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Soporte de Electrónica</strong></td>
+                            <td>Impresión 3D</td>
+                            <td>Contiene geometrías 3D complejas: curvatura para la nuca, cavidades internas, postes para tornillos y encajes precisos para el PCB y la batería.</td>
+                            <td>PLA (por su rigidez) </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Caja de Componentes</strong></td>
+                            <td>Corte Láser</td>
+                            <td>Aunque el modelo 3D muestra una caja, decidimos fabricarla con cartón. El diseño vectorial 2D permite un plegado rápido (usando *living hinges*) para formar la carcasa. Es más rápido y económico para esta etapa.</td>
+                            <td>Cartón Piedra / MDF 3mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr class="section-divider">
+
+                <h3>Actividad 2: Ajustes Previos a la Fabricación</h3>
+                <p>Revisamos y preparamos los modelos digitales, considerando tolerancias, optimización de material y orientación de impresión.</p>
+
+                <div class="doc-layout">
+                    <div class="doc-text">
+                        <h4 class="subsection-title">Ajustes de Impresión 3D (PLA / PETG)</h4>
+                        <p>
+                            Para las piezas 3D, la orientación es clave. El <strong>Collar</strong> (175.24mm x 182.62mm) se imprimirá "acostado" para maximizar la adhesión entre capas y la resistencia a la flexión.
+                        </p>
+                        <p>
+                            El <strong>Soporte de Electrónica</strong> (129.54mm x 58.77mm) se imprimirá con su base plana tocando la cama de impresión para eliminar la necesidad de soportes internos, optimizando el tiempo y el material.
+                        </p>
+                    </div>
+                    <div class="doc-media">
+                        <div class="image-grid-2">
+                            <img src="/images/tinkercad-case.png" alt="Diseño 3D del soporte de electrónica en Tinkercad" class="content-image">
+                            <img src="/images/tinkercad-collar.png" alt="Diseño 3D del collar en Tinkercad" class="content-image">
+                        </div>
+                    </div>
+                </div> <div class="doc-layout doc-layout-reverse">
+                    <div class="doc-media">
+                        <img src="/images/laser-corte.png" alt="Layout de corte láser para la caja" class="content-image image-center">
+                    </div>
+                    <div class="doc-text">
+                        <h4 class="subsection-title">Ajustes de Corte Láser (Cartón / MDF)</h4>
+                        <p>
+                            Para la <strong>Caja de Componentes</strong>, preparamos un layout vectorial 2D. Las piezas se organizaron para optimizar el material en una plancha de 100.0mm.
+                        </p>
+                        <p>
+                            Se consideró una tolerancia de "quemado" (kerf) de 0.10mm, como se indica en el archivo, para asegurar que las pestañas y ranuras encajen perfectamente tras el corte.
+                        </p>
+                    </div>
+                </div> <hr class="section-divider">
+
+                <h3>Actividad 3: Asignación de Roles del Equipo</h3>
+                <p>Para optimizar el flujo de trabajo de fabricación, definimos las siguientes responsabilidades para los miembros del equipo.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rol / Responsabilidad</th>
+                            <th>Integrante Asignado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Responsable de Impresión 3D:</strong> Preparar archivos STL, laminar (slicing) y gestionar tiempos de impresión.</td>
+                            <td>Deivid Christian</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responsable de Corte Láser:</strong> Generar archivos SVG/DXF, optimizar el layout y operar la cortadora.</td>
+                            <td>Bonifacio Zevillano</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responsable de Documentación:</strong> Registrar todo el proceso, tomar fotografías y actualizar el sitio web.</td>
+                            <td>Deivid Christian</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responsable de Ensamblaje:</strong> Post-procesar piezas, probar encajes y ensamblar la electrónica.</td>
+                            <td>Bonifacio Zevillano</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>POSTURE</h3>
+                <p>Proyecto de Investigación e Innovación Tecnológica</p>
+                <p>Tecsup 2025</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="/index.html#intro">Introducción</a></li>
+                    <li><a href="/index.html#concepto">Concepto</a></li>
+                    <li><a href="/index.html#semanas">Semanas</a></li>
+                    <li><a href="/index.html#integrantes">Integrantes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>deivid.flores@tecsup.edu.pe</p>
+                <p>bonifacio.zevillano@tecsup.edu.pe</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Posture. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
